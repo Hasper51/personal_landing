@@ -10,8 +10,8 @@
 	<script src="../libs/gsap/ScrollSmoother.min.js" defer></script> -->
 
 	<link rel="stylesheet" href="../css/main.css">
-	<!-- <script src="../js/app.js" defer></script> -->
-    <title>Фото</title>
+	
+    <title>Мультфильмы</title>
 </head>
 <body>
     <div class="wrapper">
@@ -19,24 +19,31 @@
             <a href="../index.html">Главная</a>
             <a href="page_images.html">Фото</a>
             <a href="page_compressed_images.html">Фото сжатые</a>
-            <a href="page_cartoons.html">Мультфильмы</a>
+            <a href="#">Мультфильмы</a>
             
         </nav>
 		<div class="content">
             <div class="grid">
-                
+                <!-- <div class="cartoon_preview"><img class="gallery_img " src="../cartoons/posters/1.png"></div> -->
             </div>
 				
 
 		</div>
 	</div>
+    <div class="modal close">
+        
+    </div>
 </body>
+
 <script type="text/javascript">
-    let grid = document.querySelector(".grid"),
-        s = "";
-    for (let i = 1; i <= 50; ++i) {
-        s += `<div><img class="gallery_img" src="../compressed_photos/${i}.jpg"></div>`;
+    let grid = document.querySelector(".grid")
+    s = "";
+    for (let i = 1; i <= 4; ++i) {
+        s += `<div class="cartoon_preview"><img class="gallery_img " src="../cartoons/posters/${i}.png"></div>`;
+        
     }
     grid.innerHTML = s;
+
 </script>
+<script src="../js/scripts.js"></script>
 </html>
