@@ -131,7 +131,7 @@ li {
 	margin-top: 15vh;
 	/*формируем по 4 одинаковых строки и столбца*/
 	grid-template-columns: repeat(4, 25%);
-	grid-template-rows: repeat(4, 10%);
+	grid-template-rows: repeat(4, auto);
   } 
 
   /*внешний вид ячеек*/
@@ -166,7 +166,9 @@ li {
 	z-index: 100;
 	display: none;
 }
-
+.cartoon_preview{
+	height: 100%;
+}
 .player {
 	width: 60%;
 	height: auto;
