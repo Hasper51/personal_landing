@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+	<!-- <script src="../libs/gsap/gsap.min.js" defer></script>
+	<script src="../libs/gsap/ScrollTrigger.min.js" defer></script>
+	<script src="../libs/gsap/ScrollSmoother.min.js" defer></script> -->
+    <link rel="stylesheet" href="../css/main.css">
+    <link rel="stylesheet" href="../css/bootstrap.min.css">     
+	
+	<!-- <script src="../js/app.js" defer></script> -->
+    <title>Фото</title>
+</head>
+<body>
+    <div class="wrapper">
+        <nav class="navMenu">
+            <a href="../index.html">Главная</a>
+            <a href="page_images.html">Фото</a>
+            <a href="page_compressed_images.html">Фото сжатые</a>
+            <a href="page_cartoons.html">Мультфильмы</a>
+            <a href="page_docs.html">Документы</a>
+            
+        </nav>
+
+		<!-- <div class="content">
+            <div class="grid">
+                
+            </div>
+				
+
+		</div> -->
+	</div>
+    <main>
+        <div class="album py-5">
+            <div class="container">
+        
+                <div class="row row-cols-1 row-cols-sm-2 g-3 ">
+                    <div class="col">
+                        <div class="card pdf_view" style="height: 70vh;">
+                            <embed
+                                class="card-img-top"
+                                src="/documents/labs_pdf/IST-032_Vakhitov_AA_LR4a.pdf"
+                                type="application/pdf"
+                                frameBorder="0"
+                                scrolling="auto"
+                                height="100%"
+                                width="100%"
+                                >
+                            </embed>
+                            <div class="card-body">
+                                <h5 class="card-title">Card title</h5>
+                                <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                                <!-- <a href="#" class="btn btn-primary">Go somewhere</a> -->
+                                <a href="#" class="card-link">Card link</a>
+                                <a href="#" class="card-link">Another link</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                
+            </div>
+        </div>
+    </main>
+</body>
+<script type="text/javascript">
+    let row = document.querySelector(".row"),
+        s = "";
+    for (let i = 1; i <= 7; i++) {
+        s += `<div class="col">
+            <div class="card pdf_view" style="height: 70vh;">
+                <embed
+                    class="card-img-top"
+                    src="/documents/labs_pdf/IST-032_Vakhitov_AA_LR${i}.pdf"
+                    type="application/pdf"
+                    frameBorder="0"
+                    scrolling="auto"
+                    height="100%"
+                    width="100%"
+                    >
+                </embed>
+                <div class="card-body">
+                    <h5 class="card-title">Лабораторная работа №${i}</h5>
+                    <a href="#" class="card-link">Card link</a>
+                    <a href="#" class="card-link">Another link</a>
+                </div>
+            </div>
+        </div>`;
+    }
+    row.innerHTML = s;
+</script>
+</html>
