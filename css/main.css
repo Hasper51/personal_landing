@@ -25,7 +25,6 @@ h1, h2, h3, h4, h5, h6 {
 .content, .hero, .main-header, .gallery > * {
 	will-change: transform;
 }
-@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap");
 
 .wrapper {
 	margin-bottom: 10vh;
@@ -59,9 +58,12 @@ h1, h2, h3, h4, h5, h6 {
 body{
 	background-image: url(../img/bg.jpg);
 	background-size: 50px;
-	color: #fafafa;
+	
 	font-family: montserrat-medium;
 	overflow-x: hidden;
+}
+.wrapper {
+	color: #fafafa;
 }
 .hero {
 	width: calc(var(--index) * 36);
@@ -152,34 +154,4 @@ li {
 	height: auto;
 	object-fit: cover;
 
-}
-/* .modal {
-	position: fixed;
-	top: 0;
-	left: 0;
-	width: 100%;
-	height: 100%;
-	align-items: center;
-	justify-content: center;
-	overflow-x: hidden;
-	overflow-y: auto;
-	background-color: rgba(0,0,0,.5);
-	
-	z-index: 100;
-	display: none;
-} */
-.cartoon_preview{
-	height: 100%;
-}
-.player {
-	width: 60%;
-	height: auto;
-}
-.active {
-	display: flex;
-}
-
-.pdf_view{
-	
-	height: 60vh;
 }

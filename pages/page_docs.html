@@ -12,53 +12,25 @@
     <link rel="stylesheet" href="../css/bootstrap.min.css">     
 	
 	<!-- <script src="../js/app.js" defer></script> -->
-    <title>Фото</title>
+    <title>Документы</title>
 </head>
 <body>
     <div class="wrapper">
         <nav class="navMenu">
             <a href="../index.html">Главная</a>
             <a href="page_images.html">Фото</a>
-            <a href="page_compressed_images.html">Фото сжатые</a>
             <a href="page_cartoons.html">Мультфильмы</a>
             <a href="page_docs.html">Документы</a>
-            
+            <a href="page_conclusion.html">Вывод</a>
         </nav>
 
-		<!-- <div class="content">
-            <div class="grid">
-                
-            </div>
-				
-
-		</div> -->
 	</div>
     <main>
         <div class="album py-5">
             <div class="container">
         
                 <div class="row row-cols-1 row-cols-sm-2 g-3 ">
-                    <div class="col">
-                        <div class="card pdf_view" style="height: 70vh;">
-                            <embed
-                                class="card-img-top"
-                                src="/documents/labs_pdf/IST-032_Vakhitov_AA_LR4a.pdf"
-                                type="application/pdf"
-                                frameBorder="0"
-                                scrolling="auto"
-                                height="100%"
-                                width="100%"
-                                >
-                            </embed>
-                            <div class="card-body">
-                                <h5 class="card-title">Card title</h5>
-                                <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                                <!-- <a href="#" class="btn btn-primary">Go somewhere</a> -->
-                                <a href="#" class="card-link">Card link</a>
-                                <a href="#" class="card-link">Another link</a>
-                            </div>
-                        </div>
-                    </div>
+                    
                 </div>
                 
                 
@@ -68,13 +40,14 @@
 </body>
 <script type="text/javascript">
     let row = document.querySelector(".row"),
-        s = "";
-    for (let i = 1; i <= 7; i++) {
+    s = "";
+    names = ['1','2','3','4','4а','5','5а','5б','5в','6','7','8','9','10']
+    for (let i = 0; i <= 13; i++) {
         s += `<div class="col">
-            <div class="card pdf_view" style="height: 70vh;">
+            <div class="card" style="height: 70vh;">
                 <embed
                     class="card-img-top"
-                    src="/documents/labs_pdf/IST-032_Vakhitov_AA_LR${i}.pdf"
+                    src="/documents/labs_pdf/IST-032_Vakhitov_AA_LR${names[i]}.pdf"
                     type="application/pdf"
                     frameBorder="0"
                     scrolling="auto"
@@ -83,9 +56,9 @@
                     >
                 </embed>
                 <div class="card-body">
-                    <h5 class="card-title">Лабораторная работа №${i}</h5>
-                    <a href="#" class="card-link">Card link</a>
-                    <a href="#" class="card-link">Another link</a>
+                    <h5 class="card-title">Лабораторная работа №${names[i]}</h5>
+                    <a href="../documents/labs_docx/IST-032_Vakhitov_AA_LR${names[i]}.docx" download class="card-link">Скачать Word</a>
+                    <a href="../documents/labs_zip/IST-032_Vakhitov_AA_LR${names[i]}.zip" download class="card-link">Скачать все файлы</a>
                 </div>
             </div>
         </div>`;

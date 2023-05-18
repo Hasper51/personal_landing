@@ -18,17 +18,11 @@
         <nav class="navMenu">
             <a href="../index.html">Главная</a>
             <a href="page_images.html">Фото</a>
-            <a href="page_compressed_images.html">Фото сжатые</a>
             <a href="#">Мультфильмы</a>
             <a href="page_docs.html">Документы</a>
-            
+            <a href="page_conclusion.html">Вывод</a>
         </nav>
-		<!-- <div class="content">
-            <div class="grid">
-            </div>
-				
-
-		</div> -->
+		
 	</div>
     <main>
         <div class="album py-5">
@@ -42,20 +36,17 @@
             </div>
         </div>
     </main>
-    <!-- <div class="modal close">
-        
-    </div> -->
 </body>
 
 <script type="text/javascript">
     let row = document.querySelector(".row")
     s = "";
     for (let i = 1; i <= 6; ++i) {
-        s += `<div class="col"><video id="my_video" controls width="100%" height="auto" poster="../cartoons/posters/${i}.png" preload="none"><source src="../cartoons/media/${i}.webm" type="video/webm"></video></div>`;
+        s += `<div class="col"><video id="my_video" controls width="100%" height="auto" poster="../cartoons/posters/${i}.jpg" preload="none"><source src="../cartoons/media/${i}.webm" type="video/webm"></video></div>`;
         
     }
     row.innerHTML = s;
 
 </script>
-<script src="../js/bootstrap.min.js"></script>
+
 </html>
